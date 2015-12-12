@@ -9,5 +9,6 @@ factors n = [x | x <- [1..n], n `mod` x == 0]
 perfects :: Int -> [Int]
 perfects n = [x | x <- [1..n], sum (init (factors x)) == x]
 
+--Ex03
 scalar :: [Int] -> [Int] -> [Int]
 scalar xs ys = [(\(x, y) -> x * y) zipped | zipped <- zip xs ys]
